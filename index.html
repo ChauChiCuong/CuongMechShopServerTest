@@ -407,9 +407,17 @@
                     </div>
                     <h1 class="text-2xl font-bold text-gray-800 dark:text-white">Cuong <span class="text-cyan-500">Mech</span> <span class="text-orange-500">Shop</span></h1>
                 </div>
-                <button id="mobileMenuClose" class="text-gray-600 dark:text-gray-300">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
+                <div class="flex items-center space-x-2">
+                    <a href="#" class="text-sm text-cyan-500 hover:text-cyan-600 font-medium border border-cyan-500 rounded px-2 py-1">
+                        Đăng nhập
+                    </a>
+                    <a href="#" class="text-sm text-orange-500 hover:text-orange-600 font-medium border border-orange-500 rounded px-2 py-1">
+                        Đăng ký
+                    </a>
+                    <button id="mobileMenuClose" class="text-gray-600 dark:text-gray-300">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
             </div>
             <nav>
                 <ul class="space-y-4">
@@ -440,9 +448,17 @@
                     <a href="#services" class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold py-3 px-6 rounded-full shadow transition duration-300 text-center">
                         Menu Shop
                     </a>
-                    <a href="#" class="flex items-center justify-center w-12 h-12 rounded-full bg-black border-2 border-orange-500 shadow transition duration-000 hover:bg-b-800">
-                        <img src="https://i.postimg.cc/TwSZBJrZ/CMS-user-logo.png" alt="Guest" class="w-8 h-8 object-contain">
-                    </a>
+                    <div class="relative">
+                        <button id="guestDropdownBtn" class="flex items-center justify-center w-12 h-12 rounded-full bg-black border-2 border-orange-500 shadow transition duration-300 hover:bg-gray-800">
+                            <img src="https://i.postimg.cc/TwSZBJrZ/CMS-user-logo.png" alt="Guest" class="w-8 h-8 object-contain">
+                        </button>
+                        <div id="guestDropdown" class="hidden absolute right-0 mt-2 w-full min-w-[200px] bg-white rounded-md shadow-lg z-50">
+                            <div class="py-1 px-2 space-y-2">
+                                <a href="#" class="block w-full px-4 py-2 text-sm text-cyan-500 hover:bg-cyan-100 font-medium border border-cyan-500 rounded text-center">Đăng nhập</a>
+                                <a href="#" class="block w-full px-4 py-2 text-sm text-orange-500 hover:bg-orange-100 font-medium border border-orange-500 rounded text-center">Đăng ký</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -1128,6 +1144,20 @@
                     document.body.style.overflow = 'auto';
                 }, 300);
             });
+        });
+
+        // Guest dropdown functionality
+        const guestDropdownBtn = document.getElementById('guestDropdownBtn');
+        const guestDropdown = document.getElementById('guestDropdown');
+
+        guestDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            guestDropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            guestDropdown.classList.add('hidden');
         });
 
         // Initialize animations after slight delay to ensure content is visible
