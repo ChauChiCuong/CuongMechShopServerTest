@@ -454,8 +454,8 @@
                         </button>
                         <div id="guestDropdown" class="hidden absolute right-0 mt-2 w-full min-w-[200px] bg-white rounded-md shadow-lg z-50">
                             <div class="py-1 px-2 space-y-2">
-                                <button onclick="document.getElementById('loginModal').classList.remove('hidden'); document.getElementById('guestDropdown').classList.add('hidden')" class="block w-full px-4 py-2 text-sm text-cyan-500 hover:bg-cyan-100 font-medium border border-cyan-500 rounded text-center">Đăng nhập</button>
-                                <button onclick="document.getElementById('registerModal').classList.remove('hidden'); document.getElementById('guestDropdown').classList.add('hidden')" class="block w-full px-4 py-2 text-sm text-orange-500 hover:bg-orange-100 font-medium border border-orange-500 rounded text-center">Đăng ký</button>
+                                <a href="#" class="block w-full px-4 py-2 text-sm text-cyan-500 hover:bg-cyan-100 font-medium border border-cyan-500 rounded text-center">Đăng nhập</a>
+                                <a href="#" class="block w-full px-4 py-2 text-sm text-orange-500 hover:bg-orange-100 font-medium border border-orange-500 rounded text-center">Đăng ký</a>
                             </div>
                         </div>
                     </div>
@@ -832,7 +832,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-bold">Zalo Phone Number</h3>
-                                    <p class="zalo-phone">+84 347 87 4702</p>
+                                    <p>+84 347 87 4702</p>
                                 </div>
                             </div>
                             
@@ -956,64 +956,6 @@
         </div>
     </div>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[10000] flex items-center justify-center">
-        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">Đăng nhập</h3>
-                <button onclick="document.getElementById('loginModal').classList.add('hidden')" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <form id="loginForm" class="space-y-4">
-                <div>
-                    <label for="loginEmail" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                    <input type="email" id="loginEmail" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:bg-gray-700 dark:text-white">
-                </div>
-                <div>
-                    <label for="loginPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Mật khẩu</label>
-                    <input type="password" id="loginPassword" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:bg-gray-700 dark:text-white">
-                </div>
-                <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
-                    Đăng nhập
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Register Modal -->
-    <div id="registerModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[10000] flex items-center justify-center">
-        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">Đăng ký</h3>
-                <button onclick="document.getElementById('registerModal').classList.add('hidden')" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <form id="registerForm" class="space-y-4">
-                <div>
-                    <label for="registerName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Tên người dùng</label>
-                    <input type="text" id="registerName" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:bg-gray-700 dark:text-white">
-                </div>
-                <div>
-                    <label for="registerEmail" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                    <input type="email" id="registerEmail" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:bg-gray-700 dark:text-white">
-                </div>
-                <div>
-                    <label for="registerPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Mật khẩu</label>
-                    <input type="password" id="registerPassword" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:bg-gray-700 dark:text-white">
-                </div>
-                <div>
-                    <label for="registerConfirmPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nhập lại mật khẩu</label>
-                    <input type="password" id="registerConfirmPassword" required class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:bg-gray-700 dark:text-white">
-                </div>
-                <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
-                    Đăng ký
-                </button>
-            </form>
-        </div>
-    </div>
-
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-cyan-500 text-white shadow-lg transition-all duration-300 opacity-0 invisible flex items-center justify-center hover:bg-cyan-600">
         <i class="fas fa-arrow-up text-xl"></i>
@@ -1044,167 +986,6 @@
     </footer>
 
     <script>
-        // Admin functionality
-        // Hàm kiểm tra quyền admin
-        function isAdmin() {
-            // Kiểm tra bằng cookie hoặc localStorage
-            return localStorage.getItem('adminAuth') === 'true' ||
-                    document.cookie.includes('adminAuth=true');
-        }
-
-        // Hàm kích hoạt chế độ admin bằng tổ hợp phím
-        function setupAdminShortcut() {
-            let keySequence = '';
-            document.addEventListener('keydown', (e) => {
-                // Tổ hợp phím: Ctrl+Alt+C (C for Cuong)
-                if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'c') {
-                    activateAdminMode();
-                }
-            });
-        }
-
-        // Kích hoạt chế độ admin
-        function activateAdminMode() {
-            localStorage.setItem('adminAuth', 'true');
-            document.cookie = 'adminAuth=true; max-age=3600'; // 1 hour
-            alert('Chế độ admin đã được kích hoạt!');
-            setupFileWatcher();
-        }
-
-        // Thiết lập theo dõi file config
-        function setupFileWatcher() {
-            if (!isAdmin()) return;
-
-            // Tạo nút import file
-            const importBtn = document.createElement('button');
-            importBtn.innerHTML = '<i class="fas fa-file-import"></i> Import Config';
-            importBtn.style.position = 'fixed';
-            importBtn.style.bottom = '20px';
-            importBtn.style.right = '20px';
-            importBtn.style.zIndex = '9999';
-            importBtn.style.padding = '10px';
-            importBtn.style.background = '#00BCD4';
-            importBtn.style.color = 'white';
-            importBtn.style.border = 'none';
-            importBtn.style.borderRadius = '5px';
-            importBtn.style.cursor = 'pointer';
-            importBtn.onclick = openFileSelector;
-            
-            document.body.appendChild(importBtn);
-        }
-
-        // Mở hộp chọn file
-        function openFileSelector() {
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.accept = '.txt';
-            fileInput.style.display = 'none';
-            
-            fileInput.addEventListener('change', handleConfigFile);
-            document.body.appendChild(fileInput);
-            fileInput.click();
-            document.body.removeChild(fileInput);
-        }
-
-        // Xử lý file config
-        function handleConfigFile(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                const content = e.target.result;
-                updateFromConfig(content);
-                alert('Cập nhật thành công từ file config!');
-            };
-            reader.readAsText(file);
-        }
-
-        // Cập nhật thông tin từ config
-        function updateFromConfig(configText) {
-            const config = parseConfig(configText);
-            
-            // Cập nhật notification
-            if (config.notification) {
-                document.querySelector('.maintenance-popup p').textContent = config.notification;
-                localStorage.setItem('cms_notification', config.notification);
-            }
-            
-            // Cập nhật thông tin liên hệ
-            if (config.zalo_phone) {
-                document.querySelectorAll('.zalo-phone').forEach(el => {
-                    el.textContent = config.zalo_phone;
-                });
-                localStorage.setItem('cms_zalo_phone', config.zalo_phone);
-            }
-            
-            if (config.facebook) {
-                document.querySelectorAll('.facebook-link').forEach(el => {
-                    el.textContent = config.facebook;
-                });
-                localStorage.setItem('cms_facebook', config.facebook);
-            }
-
-            // Cập nhật giá cả
-            if (config.vip_price) {
-                document.getElementById('vip-price').textContent = config.vip_price;
-                localStorage.setItem('cms_vip_price', config.vip_price);
-            }
-            
-            if (config.special_offer) {
-                document.getElementById('special-offer').textContent = config.special_offer;
-                localStorage.setItem('cms_special_offer', config.special_offer);
-            }
-        }
-
-        // Phân tích config file
-        function parseConfig(text) {
-            const lines = text.split('\n');
-            const config = {};
-            
-            lines.forEach(line => {
-                if (line.trim() && !line.startsWith('#') && line.includes(':')) {
-                    const [key, value] = line.split(':').map(item => item.trim());
-                    config[key] = value;
-                }
-            });
-            
-            return config;
-        }
-
-        // Khôi phục cấu hình từ localStorage khi trang tải
-        function restoreConfig() {
-            const notification = localStorage.getItem('cms_notification');
-            const zaloPhone = localStorage.getItem('cms_zalo_phone');
-            const facebook = localStorage.getItem('cms_facebook');
-            const vipPrice = localStorage.getItem('cms_vip_price');
-            const specialOffer = localStorage.getItem('cms_special_offer');
-            
-            if (notification) {
-                document.querySelector('.maintenance-popup p').textContent = notification;
-            }
-            
-            if (zaloPhone) {
-                document.querySelectorAll('.zalo-phone').forEach(el => {
-                    el.textContent = zaloPhone;
-                });
-            }
-            
-            if (facebook) {
-                document.querySelectorAll('.facebook-link').forEach(el => {
-                    el.textContent = facebook;
-                });
-            }
-            
-            if (vipPrice) {
-                document.getElementById('vip-price').textContent = vipPrice;
-            }
-            
-            if (specialOffer) {
-                document.getElementById('special-offer').textContent = specialOffer;
-            }
-        }
-
         // Toggle expand function
         function toggleExpand(button) {
             const content = button.nextElementSibling;
@@ -1379,67 +1160,11 @@
             guestDropdown.classList.add('hidden');
         });
 
-        // Login and Register functionality
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPassword').value;
-            
-            // Simple validation
-            if (!email || !password) {
-                alert('Vui lòng nhập đầy đủ thông tin');
-                return;
-            }
-            
-            // Here you would normally make an API call to your backend
-            console.log('Login attempt with:', email, password);
-            alert('Đăng nhập thành công (demo)');
-            document.getElementById('loginModal').classList.add('hidden');
-        });
-
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('registerName').value;
-            const email = document.getElementById('registerEmail').value;
-            const password = document.getElementById('registerPassword').value;
-            const confirmPassword = document.getElementById('registerConfirmPassword').value;
-            
-            // Validation
-            if (!name || !email || !password || !confirmPassword) {
-                alert('Vui lòng nhập đầy đủ thông tin');
-                return;
-            }
-            
-            if (password !== confirmPassword) {
-                alert('Mật khẩu không khớp');
-                return;
-            }
-            
-            if (password.length < 6) {
-                alert('Mật khẩu phải có ít nhất 6 ký tự');
-                return;
-            }
-            
-            // Here you would normally make an API call to your backend
-            console.log('Registration attempt:', {name, email, password});
-            alert('Đăng ký thành công (demo)');
-            document.getElementById('registerModal').classList.add('hidden');
-        });
-
         // Initialize animations after slight delay to ensure content is visible
         document.addEventListener('DOMContentLoaded', () => {
             createParticles();
             // Make sure content is visible immediately
             document.body.style.opacity = '1';
-            
-            // Initialize admin functionality
-            restoreConfig();
-            setupAdminShortcut();
-            
-            // Nếu đã là admin, thiết lập ngay
-            if (isAdmin()) {
-                setupFileWatcher();
-            }
             
             setTimeout(() => {
                 animateOnScroll();
@@ -1617,6 +1342,186 @@
         if (!supportedBrowsers.some(b => currentBrowser.includes(b))) {
             document.getElementById('unsupportedBrowserPopup').classList.remove('hidden');
         }
+    </script>
+
+    <script>
+    // Hệ thống quản lý tài khoản bằng file txt 
+    class AccountManager {
+        constructor() {
+            this.fileHandle = null;
+            this.filePath = 'D:\\CuongMechShop-Account\\accounts.txt';
+        }
+
+        // Hàm yêu cầu quyền truy cập file
+        async requestFileAccess() {
+            try {
+                this.fileHandle = await window.showOpenFilePicker({
+                    types: [{
+                        description: 'Text Files',
+                        accept: {'text/plain': ['.txt']}
+                    }],
+                    suggestedName: 'accounts.txt',
+                    startIn: 'documents'
+                });
+                return true;
+            } catch (error) {
+                console.error('Error accessing file:', error);
+                return false;
+            }
+        }
+
+        // Đọc nội dung file
+        async readAccounts() {
+            try {
+                if (!this.fileHandle) {
+                    const hasAccess = await this.requestFileAccess();
+                    if (!hasAccess) return null;
+                }
+                
+                const file = await this.fileHandle[0].getFile();
+                const content = await file.text();
+                return this.parseAccounts(content);
+            } catch (error) {
+                console.error('Error reading file:', error);
+                return null;
+            }
+        }
+
+        // Phân tích nội dung file txt thành danh sách tài khoản
+        parseAccounts(content) {
+            const lines = content.split('\n').filter(line => line.trim() !== '');
+            const accounts = [];
+            
+            for (const line of lines) {
+                const [username, password, ...rest] = line.split('|');
+                if (username && password) {
+                    accounts.push({
+                        username: username.trim(),
+                        password: password.trim(),
+                        data: rest.join('|').trim()
+                    });
+                }
+            }
+            
+            return accounts;
+        }
+
+        // Ghi danh sách tài khoản vào file
+        async writeAccounts(accounts) {
+            try {
+                if (!this.fileHandle) {
+                    const hasAccess = await this.requestFileAccess();
+                    if (!hasAccess) return false;
+                }
+                
+                const writable = await this.fileHandle[0].createWritable();
+                const content = accounts.map(acc => 
+                    `${acc.username}|${acc.password}|${acc.data || ''}`
+                ).join('\n');
+                
+                await writable.write(content);
+                await writable.close();
+                return true;
+            } catch (error) {
+                console.error('Error writing to file:', error);
+                return false;
+            }
+        }
+
+        // Thêm tài khoản mới
+        async addAccount(newAccount) {
+            const accounts = await this.readAccounts() || [];
+            accounts.push(newAccount);
+            return await this.writeAccounts(accounts);
+        }
+
+        // Cập nhật tài khoản
+        async updateAccount(username, updatedData) {
+            const accounts = await this.readAccounts() || [];
+            const index = accounts.findIndex(acc => acc.username === username);
+            
+            if (index !== -1) {
+                accounts[index] = { ...accounts[index], ...updatedData };
+                return await this.writeAccounts(accounts);
+            }
+            return false;
+        }
+
+        // Xóa tài khoản
+        async deleteAccount(username) {
+            const accounts = await this.readAccounts() || [];
+            const filtered = accounts.filter(acc => acc.username !== username);
+            return await this.writeAccounts(filtered);
+        }
+    }
+
+    // Khởi tạo AccountManager
+    const accountManager = new AccountManager();
+
+    // Hàm kiểm tra quyền admin (đơn giản bằng password)
+    function checkAdminPermission(password) {
+        // Đây chỉ là ví dụ, trong thực tế cần phương pháp bảo mật hơn
+        return password === 'CMS@Admin2023';
+    }
+
+    // Thêm các hàm quản lý vào window để có thể gọi từ console
+    window.adminFunctions = {
+        // Ví dụ sử dụng: adminFunctions.addAccount({username: 'test', password: '123', data: 'VIP'})
+        addAccount: async (accountData) => {
+            const isAdmin = confirm('Bạn có phải là admin? Nhập mật khẩu admin:');
+            if (!isAdmin) return console.log('Truy cập bị từ chối');
+            
+            const password = prompt('Nhập mật khẩu admin:');
+            if (!checkAdminPermission(password)) {
+                return console.log('Mật khẩu không đúng');
+            }
+            
+            const success = await accountManager.addAccount(accountData);
+            console.log(success ? 'Thêm tài khoản thành công' : 'Lỗi khi thêm tài khoản');
+        },
+        
+        // Ví dụ sử dụng: adminFunctions.updateAccount('user1', {password: 'newpass', data: 'VIP2'})
+        updateAccount: async (username, updatedData) => {
+            const password = prompt('Nhập mật khẩu admin:');
+            if (!checkAdminPermission(password)) {
+                return console.log('Mật khẩu không đúng');
+            }
+            
+            const success = await accountManager.updateAccount(username, updatedData);
+            console.log(success ? 'Cập nhật thành công' : 'Lỗi khi cập nhật');
+        },
+        
+        // Ví dụ sử dụng: adminFunctions.deleteAccount('user1')
+        deleteAccount: async (username) => {
+            const password = prompt('Nhập mật khẩu admin:');
+            if (!checkAdminPermission(password)) {
+                return console.log('Mật khẩu không đúng');
+            }
+            
+            if (confirm(`Bạn chắc chắn muốn xóa ${username}?`)) {
+                const success = await accountManager.deleteAccount(username);
+                console.log(success ? 'Xóa thành công' : 'Lỗi khi xóa');
+            }
+        },
+        
+        // Ví dụ sử dụng: adminFunctions.listAccounts()
+        listAccounts: async () => {
+            const password = prompt('Nhập mật khẩu admin:');
+            if (!checkAdminPermission(password)) {
+                return console.log('Mật khẩu không đúng');
+            }
+            
+            const accounts = await accountManager.readAccounts();
+            console.log('Danh sách tài khoản:', accounts);
+            return accounts;
+        }
+    };
+
+    console.log('Admin functions đã sẵn sàng. Sử dụng:');
+    console.log('- adminFunctions.addAccount({username, password, data})');
+    console.log('- adminFunctions.updateAccount(username, {fields to update})');
+    console.log('- adminFunctions.deleteAccount(username)');
+    console.log('- adminFunctions.listAccounts()');
     </script>
 </body>
 </html>
